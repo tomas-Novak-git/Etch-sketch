@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paintSquare {
+    border: solid black 1px;
+    flex-grow: 1;
+    flex
+}
+.mainBlock {
+    display: flex;
+    flex-direction: row;
+}
+#paintArea {
+    width: 30rem;
+    height: 30rem;
+    flex: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid black 3px;
+}
