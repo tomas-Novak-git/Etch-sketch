@@ -1,22 +1,106 @@
-body {
+html,body {
+    overflow: hidden;
+    max-width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
+    font-family: 'Dongle', sans-serif;
 }
 .paintSquare {
-    border: solid black 1px;
-    flex-grow: 1;
-    flex
+    border: 0.2px;
 }
-.mainBlock {
+.header {
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    font-size: 80px;
+    margin: 0;
+    color: rgb(237, 170, 76);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.373);
+}
+#mainBlock {
+    background-color:rgb(119, 203, 234);
+    height: 800px;
+    width: 800px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    border-radius: 15px;
+}
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
 }
 #paintArea {
-    width: 30rem;
-    height: 30rem;
-    flex: 0;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(242, 242, 242);
     display: flex;
     flex-wrap: wrap;
-    border: solid black 3px;
+    border: 2px solid black;
+}
+.buttons{
+    display: flex;
+    max-width: 604px;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 1em;
+}
+.numberBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.colorReset {
+    display: flex;
+    justify-content: space-around;
+    width: 604px;
+    margin-top: 1rem;
+    max-height: 50px;
+}
+button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    min-width: 50px;
+    border: 2px rgb(65, 175, 230) solid;
+    background-color: rgb(26, 157, 204);
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+.slider {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 100%; 
+    height: 25px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+  .gridRange {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+#valueText {
+    text-align: center;
+    font-family: 'Dongle', sans-serif;
+    margin: 0;
+    font-size: large;
+}
+#favcolor {
+    height: 60px;
+    width: 80px;
+} 
+.colorPick {
+    margin: 0;
+    font-size: medium;
+    text-align: center;
 }

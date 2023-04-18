@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="mainBlock">
-        <button id="sixteenBtn">4x4</button>
-        <button id="thirtyTwoBtn">8x8</button>
-        <div id="paintArea">
+        <div class="wrap">
+            <p class="header">ETCH & SKETCH</p>
+            <div id="paintArea"></div>
+                <div class="buttons">
+                    <div class="gridRange">
+                        <p id="valueText">X x X</p>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                    <div class="colorReset">
+                        <button id="randomColor">RAINBOW</button>
+                            <div id="colorPick"> 
+                            <input type="color" id="favcolor" class="button" value="#ff0000">
+                            <p class="colorPick">Your pick</p>
+                            </div>
+                        <button id="reset">CLEAR</button>
+                    </div>
+                </div>
+            </div>   
         </div>
     </div>
     <script src="javascript.js"></script>
