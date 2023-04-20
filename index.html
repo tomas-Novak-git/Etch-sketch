@@ -14,13 +14,14 @@
     <div id="mainBlock">
         <div class="wrap">
             <p class="header">ETCH & SKETCH</p>
-            <div id="paintArea"></div>
+            <div id="paintArea">
+            </div>
                 <div class="buttons">
-                    <div class="gridRange">
-                        <p id="valueText">X x X</p>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    </div>
                     <div class="colorReset">
+                        <div class="sliderStyle">
+                        <p id="valueText">4x4</p>
+                        <input type="range" min="4" max="64" value="1" step="4" class="myRange" id="slider">
+                        </div>
                         <button id="randomColor">RAINBOW</button>
                             <div id="colorPick"> 
                             <input type="color" id="favcolor" class="button" value="#ff0000">
