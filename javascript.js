@@ -1,4 +1,3 @@
-
 const favcolor = document.getElementById("favcolor");
 const resetBtn = document.getElementById("reset");
 const valueText = document.getElementById("valueText");
@@ -6,7 +5,6 @@ const colorPick = document.getElementById("colorPick");
 const fourByfour = document.getElementById("fourByfour");
 
 // grid squares generating func
-
 function createPaintArea(size){
     let paintArea = document.getElementById("paintArea");
     paintArea.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -19,7 +17,12 @@ function createPaintArea(size){
         paintArea.insertAdjacentElement("beforeend", div)
     }
 }
-
+// boardClean function to clear container before adding more divs.
+// Doesn't allow stacking countless divs.
+function boardClean(){
+    let paintArea = document.getElementById("paintArea");
+    paintArea.innerHTML = "";
+}
 // // Slider - value and grid making func
 
 const slider = document.getElementById('slider');
@@ -28,6 +31,7 @@ let size = 4;
 function sliderChange() {
     valueText.textContent = `${slider.value} x ${slider.value}`;
     size = document.getElementById("slider").value;
+    boardClean();
     createPaintArea(size);
 }
 createPaintArea(size);
