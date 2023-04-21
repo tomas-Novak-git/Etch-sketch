@@ -11,6 +11,8 @@ html,body {
 #paintSquare {
     margin: 0;
     padding: 0;
+    background-color: lightgrey;
+    border: solid 1px rgba(255, 255, 255, 0.3);
 }
 .header {
     font-weight: bold;
