@@ -86,8 +86,12 @@ button {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     margin: 2px;
-    font-size: 20px;
+    font-size: 18px;
     text-shadow: 1px 1px rgba(255, 0, 0, 0.591);
+    letter-spacing: 0px;
+}
+.sliderStyle {
+    width: 135px;
 }
 #favcolor {
     height: 40px;
