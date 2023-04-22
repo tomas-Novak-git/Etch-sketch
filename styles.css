@@ -6,8 +6,8 @@ html{
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    font-family: 'Dongle', sans-serif;
-    background-color: rgba(255, 174, 0, 0.263);
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgba(228, 160, 13, 0.382);
 }
 #paintSquare {
     margin: 0;
@@ -19,8 +19,9 @@ html{
     font-weight: bold;
     position: relative;
     text-align: center;
-    font-size: 80px;
-    margin: 0;
+    font-size: 40px;
+    max-width: 80%;
+    margin: 2rem;
     color: rgb(0, 0, 0);
     text-shadow: 3px 3px rgba(255, 0, 0, 0.591);
 }
@@ -70,8 +71,8 @@ button {
     min-width: 50px;
     max-height: 60px;
     background-color: rgb(249, 249, 249);
-    font-family: 'Dongle', sans-serif;
-    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
     text-align: center;
     border: solid 1px rgba(0, 0, 0, 0.775);
 }
@@ -83,14 +84,14 @@ button {
   }
 #valueText {
     text-align: center;
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
-    font-size: 50px;
+    font-size: 20px;
     text-shadow: 1px 1px rgba(255, 0, 0, 0.591);
 }
 #favcolor {
-    height: 60px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     border-radius: 0px;
 } 
 #reset:hover {
@@ -100,10 +101,13 @@ button {
     background-color: blanchedalmond;
     color: darkgray;
 }
+#colorPick {
+    display: flex;
+    flex-direction: column;
+}
 .colorPick {
-    margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 10px;
     text-align: center;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.321);
 }
