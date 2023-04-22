@@ -1,6 +1,5 @@
-const resetBtn = document.getElementById("reset");
 const valueText = document.getElementById("valueText");
-const paintSquare = document.querySelector("paintSquare");
+const paintSquare = document.getElementById("paintSquare");
 let newColor = "#ff0000";
 // grid squares generating func
 function createPaintArea(size){
@@ -40,17 +39,25 @@ const chooseColor = document.querySelector('#favcolor');
 chooseColor.addEventListener('input', () => {
     newColor = document.getElementById("favcolor").value;
 })
+// reset Button
+const resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", resetButton);
+function resetButton (size){  
+    const paintSquare = document.getElementById("paintSquare");
+    paintSquare.style.backgroundColor = "lightgrey";
+}
 // random color generator
-const rainbow = document.querySelector("#randomColor");
-rainbow.addEventListener('click', () => {
-    const min = 1;
-    const max = 255;
-    const square = document.getElementById("paintSquare");
-    square.addEventListener('mouseover', () => {
-    let red = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
-    let green = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
-    let blue = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
-    newColor = `rgb(${red},${green},${blue})`;
-    })
-})
+// const rainbow = document.querySelector("#randomColor");
+// rainbow.addEventListener('click', () => {
+//     const min = 1;
+//     const max = 255;
+//     const square = document.getElementById("paintSquare");
+//     square.addEventListener('mousever', () => {
+//     let red = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
+//     let green = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
+//     let blue = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
+//     newColor = `rgb(${red},${green},${blue})`;
+//     console.log(newColor);
+//     })
+// })
 createPaintArea(size);

@@ -26,7 +26,7 @@ html,body {
 #mainBlock {
     background-color:rgb(119, 203, 234);
     height: 70vh;
-    width: auto;
+    width: 70vh;
     display: flex;
     justify-content: center;
     border-radius: 15px;
@@ -38,20 +38,22 @@ html,body {
     flex-flow: column;
     align-items: center;
     margin: 0;
+    /* width: 60vw; */
 }
 #paintArea {
-    width: 500px;
-    height: 500px;
+    width: 50vh;
+    height: 50vw;
     background-color: rgb(251, 239, 209);
     display: grid;
     border: 1px solid black;
 }
 .buttons{
     display: flex;
-    max-width: 604px;
-    justify-content: center;
+    width: 50vh;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
-    gap: 1em;
+    margin-top: 1rem;
 }
 .numberBtn {
     display: flex;
@@ -62,22 +64,19 @@ html,body {
 }
 .colorReset {
     display: flex;
-    justify-content: space-around;
-    width: 604px;
     margin-top: 1rem;
     max-height: 50px;
 }
 button {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0.5rem;
     min-width: 50px;
-    border: 2px rgb(65, 175, 230) solid;
-    background-color: rgb(26, 157, 204);
+    max-height: 60px;
+    background-color: rgb(26, 195, 204);
     font-family: 'Dongle', sans-serif;
     font-size: 25px;
     text-align: center;
 }
-  .gridRange {
+.gridRange {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -87,14 +86,17 @@ button {
     text-align: center;
     font-family: 'Dongle', sans-serif;
     margin: 0;
-    font-size: 30px;
+    font-size: 50px;
 }
 #favcolor {
     height: 60px;
     width: 80px;
 } 
+#colorPick {
+    margin-top: 48px;
+}
 .colorPick {
     margin: 0;
-    font-size: medium;
+    font-size: large;
     text-align: center;
 }
