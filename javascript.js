@@ -16,22 +16,24 @@ function createPaintArea(size){
         let div = document.createElement("div");
         div.setAttribute("id", "paintSquare");
         if (dotBtn == 0 && lineBtn == 1) {
-        div.addEventListener('mouseover', function(event){
-            event.target.style.backgroundColor = `${newColor}`;
-        })
-        } else if (dotBtn == 1 && lineBtn == 0) {
-        div.addEventListener('mousedown', function(event){
-            event.target.style.backgroundColor = `${newColor}`;
-    })}
+            div.addEventListener('mouseover', function(event){
+                event.target.style.backgroundColor = `${newColor}`;
+            })
+            } else if (dotBtn == 1 && lineBtn == 0) {
+            div.addEventListener('mousedown', function(event){
+                event.target.style.backgroundColor = `${newColor}`;
+        })}
         paintArea.insertAdjacentElement("beforeend", div)
     }
 }
+
 // boardClean function to clear container before adding more divs.
 // Doesn't allow stacking countless divs.
 function boardClean(){
     let paintArea = document.getElementById("paintArea");
     paintArea.innerHTML = "";
 }
+
 // // Slider - value and grid making func
 const slider = document.getElementById('slider');
 slider.addEventListener('input', sliderChange);
@@ -43,11 +45,13 @@ function sliderChange() {
     boardClean();
     createPaintArea(size);
 }
+
 // color choosing func
 const chooseColor = document.querySelector('#favcolor');
 chooseColor.addEventListener('input', () => {
     newColor = document.getElementById("favcolor").value;
 })
+
 // reset Button
 const resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", resetButton);
