@@ -13,7 +13,7 @@ html{
     margin: 0;
     padding: 0;
     background-color: lightgrey;
-    border: solid 1px rgba(255, 255, 255, 0.3);
+    border: solid 1px rgba(255, 255, 255, 0.174);
 }
 .header {
     font-weight: bold;
@@ -85,7 +85,7 @@ button {
 #valueText {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    margin: 0;
+    margin: 2px;
     font-size: 20px;
     text-shadow: 1px 1px rgba(255, 0, 0, 0.591);
 }
@@ -95,9 +95,23 @@ button {
     border-radius: 0px;
 } 
 #reset:hover {
-    background-color: antiquewhite;
+    background-color: rgb(243, 204, 152);
 }
 #reset:active {
+    background-color: blanchedalmond;
+    color: darkgray;
+}
+#dot:hover {
+    background-color: rgb(243, 204, 152);
+}
+#dot:active {
+    background-color: blanchedalmond;
+    color: darkgray;
+}
+#line:hover {
+    background-color: rgb(243, 204, 152);
+}
+#line:active {
     background-color: blanchedalmond;
     color: darkgray;
 }
