@@ -42,7 +42,7 @@ chooseColor.addEventListener('input', () => {
 // reset Button
 const resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", resetButton);
-function resetButton (size){  
+function resetButton() {  
     const paintSquare = document.getElementById("paintSquare");
     paintSquare.style.backgroundColor = "lightgrey";
 }
