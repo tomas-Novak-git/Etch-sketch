@@ -15,9 +15,13 @@
     <div id="mainBlock">
         <div class="wrap">
             <p class="header">ETCH & SKETCH</p>
+            <p class="instructions">Choose color or go crazy with <span class="rainbow">RANDOM</span> mode.<br>
+            Click on tiles to disable or enable painting.</p>
             <div id="paintArea">
             </div>
+            <p id="text">Painting is ON</p>
                 <div class="buttons">
+
                     <div id="colorPick"> 
                             <input type="color" id="favcolor" class="button" value="#ff0000">
                             <p class="colorPick">YOUR COLOR</p>
@@ -27,8 +31,7 @@
                             <input type="range" min="4" max="64" value="1" step="4" class="myRange" id="slider">
                         </div>
                     <button id="reset">BOARD<br>CLEAR</button>
-                    <button id="dot">DOT</button>
-                    <button id="line">LINE</button>
+                    <button class = "rainbow" id="random" onclick="randomChange()">RANDOM</button>
                 </div>
             </div>   
         </div>

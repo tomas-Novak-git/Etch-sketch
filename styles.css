@@ -25,9 +25,37 @@ html{
     color: rgb(0, 0, 0);
     text-shadow: 3px 3px rgba(255, 0, 0, 0.591);
 }
+.instructions {
+    font-size: medium;
+    text-align: center;
+    max-width: 50vh;
+    text-shadow: 3px 3px rgba(255, 0, 0, 0.591);
+    margin-top: 0;
+}
+.rainbow {
+    animation: colorRotate 6s linear 0s infinite;
+}
+
+@keyframes rainbow {
+    from {
+        color: #6666ff;
+      }
+      10% {
+        color: #0099ff;
+      }
+      50% {
+        color: #00ff00;
+      }
+      75% {
+        color: #ff3399;
+      }
+      100% {
+        color: #6666ff;
+      }
+    }
 #mainBlock {
     background-color:rgb(228, 160, 13);
-    height: 70vh;
+    height: 80vh;
     width: 70vh;
     display: flex;
     justify-content: center;
@@ -52,7 +80,6 @@ html{
     display: flex;
     width: 50vh;
     justify-content: space-between;
-    margin-top: 3rem;
 }
 .numberBtn {
     display: flex;
@@ -105,17 +132,10 @@ button {
     background-color: blanchedalmond;
     color: darkgray;
 }
-#dot:hover {
+#random:hover {
     background-color: rgb(243, 204, 152);
 }
-#dot:active {
-    background-color: blanchedalmond;
-    color: darkgray;
-}
-#line:hover {
-    background-color: rgb(243, 204, 152);
-}
-#line:active {
+#random:active {
     background-color: blanchedalmond;
     color: darkgray;
 }
@@ -155,4 +175,7 @@ button {
     height: 25px;
     background: #633800;
     cursor: pointer;
+}
+#text {
+    margin: 1rem;
 }

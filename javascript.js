@@ -1,10 +1,10 @@
 const valueText = document.getElementById("valueText");
 const paintSquare = document.getElementById("paintSquare");
 const paintArea = document.getElementById("paintArea");
+document.getElementById("text");
 
 let newColor = "#ff0000";
-let dotBtn = 0;
-let lineBtn = 1;
+let click = true;
 
 // grid squares generating func
 function createPaintArea(size){
@@ -15,14 +15,7 @@ function createPaintArea(size){
     for (let i = 0; i < numSquares; i++){
         let div = document.createElement("div");
         div.setAttribute("id", "paintSquare");
-        if (dotBtn == 0 && lineBtn == 1) {
-            div.addEventListener('mouseover', function(event){
-                event.target.style.backgroundColor = `${newColor}`;
-            })
-            } else if (dotBtn == 1 && lineBtn == 0) {
-            div.addEventListener('mousedown', function(event){
-                event.target.style.backgroundColor = `${newColor}`;
-        })}
+        div.addEventListener('mouseover', colorSquare)
         paintArea.insertAdjacentElement("beforeend", div)
     }
 }
@@ -46,12 +39,24 @@ function sliderChange() {
     createPaintArea(size);
 }
 
-// color choosing func
+// color choosing funcs
 const chooseColor = document.querySelector('#favcolor');
 chooseColor.addEventListener('input', () => {
     newColor = document.getElementById("favcolor").value;
 })
+function colorSquare () {
+   if (click){
+    if(newColor == 'random'){
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+    this.style.backgroundColor = newColor;
+    }
+}
+}
 
+function randomChange() {
+    newColor = "random";
+}
 // reset Button
 const resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", resetButton);
@@ -62,38 +67,21 @@ function resetButton() {
         Area[i].style.backgroundColor = "lightgrey";
     }
 }
-// paint type changers - DOT and LINE
-let dotButton = document.getElementById("dot");
-dotButton.addEventListener('click', dotFunc);
+// func that disables painting on click.
 
-function dotFunc() {
-    dotBtn = 1;
-    lineBtn = 0;
-    boardClean();
-    createPaintArea(size);
-}
-let lineButton = document.getElementById("line");
-lineButton.addEventListener('click', lineFunc);
-
-function lineFunc () {
-    lineBtn = 1;
-    dotBtn = 0;
-    boardClean();
-    createPaintArea(size);
-}
-
-// random color generator
-// const rainbow = document.querySelector("#randomColor");
-// rainbow.addEventListener('click', () => {
-//     const min = 1;
-//     const max = 255;
-//     const square = document.getElementById("paintSquare");
-//     square.addEventListener('mousever', () => {
-//     let red = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
-//     let green = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
-//     let blue = Math.floor(Math.random() * (+max + 1 - +min)) + +min;
-//     newColor = `rgb(${red},${green},${blue})`;
-//     console.log(newColor);
-//     })
-// })
+document.querySelector('#paintArea').addEventListener('click', ()=> {
+    click = !click;
+    if (click === false){
+        text.textContent = "Painting OFF";
+    } else {
+        text.textContent = "Painting ON";
+    }
+})
+// function textContent(click) {
+//     if (click === true){
+//         text.textContent = "Painting is ON"
+//     } else {
+//         text.textContent = "Painting is OFF"
+//     }
+// }
 createPaintArea(size);
