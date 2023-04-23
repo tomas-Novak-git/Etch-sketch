@@ -114,6 +114,9 @@ button {
 #random:hover {
     background-color: rgb(243, 204, 152);
 }
+.randomActive {
+    background-color: rgb(243, 204, 152);
+}
 #random:active {
     background-color: blanchedalmond;
     color: darkgray;

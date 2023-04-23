@@ -43,6 +43,9 @@ function sliderChange() {
 const chooseColor = document.querySelector('#favcolor');
 chooseColor.addEventListener('input', () => {
     newColor = document.getElementById("favcolor").value;
+    let random = document.getElementById("random");
+    random.style.background = "white";
+    random.style.color = "black";
 })
 function colorSquare () {
    if (click){
@@ -56,6 +59,9 @@ function colorSquare () {
 
 function randomChange() {
     newColor = "random";
+    let random = document.getElementById("random");
+    random.style.background = "linear-gradient(45deg , red,yellow,green,blue)";
+    random.style.color = "white";
 }
 // reset Button
 const resetBtn = document.getElementById("reset");
