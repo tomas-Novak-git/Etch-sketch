@@ -32,27 +32,6 @@ html{
     text-shadow: 3px 3px rgba(255, 0, 0, 0.591);
     margin-top: 0;
 }
-.rainbow {
-    animation: colorRotate 6s linear 0s infinite;
-}
-
-@keyframes rainbow {
-    from {
-        color: #6666ff;
-      }
-      10% {
-        color: #0099ff;
-      }
-      50% {
-        color: #00ff00;
-      }
-      75% {
-        color: #ff3399;
-      }
-      100% {
-        color: #6666ff;
-      }
-    }
 #mainBlock {
     background-color:rgb(228, 160, 13);
     height: 80vh;
@@ -122,7 +101,7 @@ button {
 }
 #favcolor {
     height: 40px;
-    width: 40px;
+    width: 100px;
     border-radius: 0px;
 } 
 #reset:hover {

@@ -77,11 +77,4 @@ document.querySelector('#paintArea').addEventListener('click', ()=> {
         text.textContent = "Painting ON";
     }
 })
-// function textContent(click) {
-//     if (click === true){
-//         text.textContent = "Painting is ON"
-//     } else {
-//         text.textContent = "Painting is OFF"
-//     }
-// }
 createPaintArea(size);
