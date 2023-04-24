@@ -19,7 +19,7 @@ html{
     font-weight: bold;
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     max-width: 80%;
     margin: 2rem;
     color: rgb(0, 0, 0);
@@ -52,7 +52,7 @@ html{
 }
 #paintArea {
     width: 50vh;
-    height: 50vw;
+    height: 50vh;
     background-color: rgb(251, 239, 209);
     display: grid;
     border: 1px solid black;
@@ -65,19 +65,19 @@ html{
 .numberBtn {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 37.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 .colorReset {
     display: flex;
     margin-top: 1rem;
-    max-height: 50px;
+    max-height: 3.125rem;
 }
 button {
     padding: 0.5rem;
-    min-width: 50px;
-    max-height: 60px;
+    min-width: 3.125rem;
+    max-height: 3.75rem;
     background-color: rgb(249, 249, 249);
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
@@ -114,9 +114,6 @@ button {
     color: darkgray;
 }
 #random:hover {
-    background-color: rgb(243, 204, 152);
-}
-.randomActive {
     background-color: rgb(243, 204, 152);
 }
 #random:active {
