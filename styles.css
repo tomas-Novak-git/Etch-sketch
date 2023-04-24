@@ -28,12 +28,14 @@ html{
 .instructions {
     font-size: medium;
     text-align: center;
+    line-height: 1.3rem;
     max-width: 50vh;
     text-shadow: 3px 3px rgba(255, 0, 0, 0.591);
     margin-top: 0;
+    margin-bottom: 5px;
 }
 #mainBlock {
-    background-color:rgb(228, 160, 13);
+    background-color:rgb(226, 171, 53);
     height: 80vh;
     width: 70vh;
     display: flex;
